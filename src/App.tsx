@@ -3,25 +3,27 @@ import logo from "./logo.svg";
 import "./App.css";
 import { motion } from "framer-motion";
 
-const pathVariants = {
-  hidden: { pathLength: 0, opacity: 0 },
-  visible: (custom: { delay: number; duration: number }) => ({
-    pathLength: 1,
-    opacity: 1,
-    transition: {
-      opacity: { duration: 0, delay: custom.delay },
-      default: {
-        delay: custom.delay,
-        duration: custom.duration,
-        ease: "linear",
-      },
-    },
-  }),
-};
 
-function GenerateSVG(props: {
+function GenerateLogo(props: {
   timings: [number, number, number, number, number];
 }) {
+
+  const pathVariants = {
+    hidden: { pathLength: 0, opacity: 0 },
+    visible: (custom: { delay: number; duration: number }) => ({
+      pathLength: 1,
+      opacity: 1,
+      transition: {
+        opacity: { duration: 0, delay: custom.delay },
+        default: {
+          delay: custom.delay,
+          duration: custom.duration,
+          ease: "linear",
+        },
+      },
+    }),
+  };
+  
   return (
     <motion.svg
       xmlns="http://www.w3.org/2000/svg"
@@ -119,7 +121,7 @@ function GenerateSVG(props: {
 function App() {
   return (
     <div className="App">
-      <GenerateSVG timings={[1, 2.5, 4, 4.5, 5]} />
+      <GenerateLogo timings={[1, 2.5, 4, 4.5, 5]} />
     </div>
   );
 }
