@@ -1,24 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { motion } from "framer-motion";
+
+const pathDefinition: string =
+  " M 749 451 L 749 464 L 794 464 L 794 785 L 747 785 L 747 798 L 856 798 L 856 785 L 808 785 L 808.028 680 L 808.333 678 L 808.722 677 L 810.083 675 L 863 613 L 863.528 614.5 L 981.25 783.5 L 982 785 L 932 785 L 932 798 L 1029 798 L 1029 785 L 999 785 L 998.472 783.5 L 872.25 604.778 L 871 604 L 871 602 L 872.25 601.222 L 987.667 467.055 L 988.639 465.5 L 989 464 L 1026 464 L 1026 451 L 930 451 L 930 464 L 971 464 L 808 656 L 808 464 L 855 464 L 855 451 L 749 451 Z ";
+
+const pathVariants = {
+  hidden: {
+    pathLength: 0,
+  },
+  visible: {
+    pathLength: 1,
+    transition: {
+      duration: 3,
+      ease: "linear"
+    },
+  },
+};
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <motion.svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="813.32 604.866 149.359 231.268"
+        width="149.359pt"
+        height="231.268pt"
+        className="item"
+      >
+        <motion.path
+          variants={pathVariants}
+          initial="hidden"
+          animate="visible"
+          d=" M 827.18 713.2 C 848.149 667.664 853.846 640.694 848.18 626.2 C 840.346 606.161 829.992 618.2 826.18 628.2 C 822.367 638.2 823.521 715.837 827.18 727.2 C 830.276 736.817 837.786 747.952 846.18 744.2 C 853.397 740.973 864.167 728.879 862.18 717.2 C 860.049 704.68 851.659 702.908 849.18 703.2 C 843.978 703.54 842.818 706.936 843.037 710.512 C 843.301 714.823 845.569 719.396 845.18 719.2 C 842.128 717.661 839.27 702.511 849.519 703.13 C 853.516 702.409 855.874 705.575 857.233 707.255 C 860.484 710.648 862.552 718.243 862.176 722.287 C 862.035 725.486 862.155 727.891 862.448 729.413 C 863.493 734.836 872.112 735.957 875.18 736.2 C 883.355 736.847 899.322 711.644 901.18 704.2 C 902.445 699.128 900.538 706.632 897.946 716.372 C 895.712 723.54 893.417 726.619 895.18 733.2 C 896.942 739.78 906.126 743.85 913.18 740.2 C 920.233 736.549 926.422 706.075 926.18 707.2 C 923.799 728.07 922.485 740.757 922.18 745.2 C 921.908 749.149 922.19 767.168 922.18 799.2 C 921.599 815.299 916.286 823.986 910.18 825.2 C 903.85 826.458 897.836 825.137 897.18 819.2 C 896.523 813.262 897.148 797.918 905.18 782.2 C 913.211 766.481 918.055 759.762 920.18 757.2 Q 922.305 754.637 940.18 736.2 Q 951.492 722.325 952.18 718.2"
+          fill="none"
+          vector-effect="non-scaling-stroke"
+          stroke-width="7"
+          stroke="rgb(0,0,0)"
+          stroke-linejoin="miter"
+          stroke-linecap="square"
+          stroke-miterlimit="3"
+        />
+      </motion.svg>
     </div>
   );
 }
