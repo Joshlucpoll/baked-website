@@ -43,11 +43,12 @@
   width: 10000px;
 }
 
-.item {
-  /* width: 56%; */
-  overflow: visible;
-  stroke: #000;
-  stroke-width: 7;
+.svg {
   stroke-linejoin: round;
   stroke-linecap: round;
+}
+
+.signature {
+  stroke-width: 7;
+  fill: none;
 }
