@@ -37,7 +37,6 @@
   }
 } */
 
-
 .path {
   height: 1000px;
   width: 10000px;
@@ -51,4 +50,8 @@
 .signature {
   stroke-width: 7;
   fill: none;
+}
+
+.baked-letter {
+  /* transform-origin: right; */
 }
