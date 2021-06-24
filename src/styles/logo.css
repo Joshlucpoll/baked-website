@@ -1,0 +1,11 @@
+.svg {
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  max-height: 70vh;
+  max-width: 70vw;
+}
+
+.signature {
+  stroke-width: 7;
+  fill: none;
+}
